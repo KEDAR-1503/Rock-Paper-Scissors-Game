@@ -1,0 +1,370 @@
+body{
+    cursor: none;
+}
+.startwindow{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width:100vw;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left:0;
+    z-index: 1;
+}
+
+.gamewindow{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+    color: black;
+}
+
+#gamename{
+    display: flex;
+    width: 100vw;
+    height:max-content;
+    padding: 10px;
+    font-family: threeDfont;
+    color: black;
+    font-size: 80px;
+    background-color: lightblue;
+    justify-content: center;
+    background:linear-gradient(to right,red,green,blue);
+}
+
+.centercontainer{
+    display: flex;
+    height: max-content;
+    width: 100vw;
+    justify-content: center;
+}
+
+label{
+    color: white;
+    font-size: x-large;
+    font-family: 'Architects Daughter', cursive;
+}
+
+input{
+    height: 24px;
+    width: 30%;
+    background-color: transparent;
+    border: solid 2px white;
+    border-radius: 20px;
+    margin-left:10px ;
+    color: white;
+    padding-left: 20px;
+    font-family: 'Architects Daughter', cursive;
+    font-size: inherit;
+}
+
+input:focus{
+    outline: none;
+    
+}
+.centercontainer2{
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    width: 100vw;
+    align-items: center;
+    padding: 20px;
+    gap:30px;
+}
+
+#startbtn{
+    background-color: seagreen;
+    border: none;
+    padding: 20px;
+    height: max-content;
+    width:200px;
+    border-radius: 20px;
+    font-family: 'Architects Daughter', cursive;
+    font-size:xx-large;
+    border: none;
+    cursor: none ;
+}
+
+#startbtn:hover{
+    background-color: lawngreen;
+    transform: scale(1.5);
+}
+
+@font-face {
+    src: url("3dlet.ttf");
+    font-family: threeDfont;
+}
+
+#gamelogo{
+    animation-name:rotatelogo;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 4s;
+}
+
+@keyframes rotatelogo{
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeout{
+    from{
+        opacity: 1;
+    }
+
+    to{
+        opacity: 0.2;
+    }
+}
+
+.scoreboard{
+    display: flex;
+    justify-content: space-between;
+    /* justify-content: center; */
+    height: 10vh;
+    width: 100vw;
+    background-color: transparent;
+    padding: 10px;
+}
+
+.game{
+    display: flex;
+    height: 50vh;
+    display: 100vw;
+    background-color: transparent;
+}
+
+.controls{
+    display: flex;
+    height: 20vh;
+    width: 100vw;
+    background-color: transparent;
+}
+
+.reset{
+    display: flex;
+    height: 20vh;
+    width: 100vw;
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+}
+
+#scorecard{
+    display: flex;
+    height:inherit; 
+    width:30%;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.score{
+    height: inherit;
+    width: 50%;
+    background-color: transparent;
+    text-align: center;
+    font-family: 'scorefont', sans-serif;
+    font-size: xxx-large;
+    font-weight: bolder;
+}
+
+.side{
+    display: flex;
+    justify-content: space-around;
+    height: inherit;
+    width:50%;
+    background-color: transparent;
+}
+
+.life{
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+    width: max-content;
+    padding: 10px;
+    justify-content: space-around;
+    background-color: transparent;
+}
+
+.charter{
+    display: flex;
+    width: max-content;
+    height: inherit;
+    background-color: transparent;
+}
+
+#compcharter{
+    height: inherit;
+    width: auto;
+}
+
+.fa-gamepad{
+    color: red;
+    border: 2px solid white;
+    border-radius: 50px;
+    padding: 10px;
+}
+
+.playercontrol{
+    display: flex;
+    height: inherit;
+    width: 40vw;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.message{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20vw;
+    font-family: 'Architects Daughter', cursive;
+    font-size: 8vh;
+    font-weight: bolder;
+    text-align: center;
+    background-color: lawngreen;
+}
+
+.rps{
+    height: max-content;
+    background-color: transparent;
+    border: 2px solid white;
+    width:10vw ;
+    color: white;
+    border-radius: 50px;
+    cursor: none;
+    padding: 10px;
+}
+
+#restart{
+    height: max-content;
+    width: 20vw;
+    background-color: white;
+    font-size:x-large;
+    font-family: scorefont;
+    padding: 10px;
+    background-color: red;
+    color: limegreen;
+    cursor: none;
+}
+
+@font-face {
+    src: url("scorefontgame.ttf");
+    font-family: scorefont;
+}
+
+.name{
+    display: flex;
+    width: 35%;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: white;
+    font-family: scorefont;
+    font-size: xx-large;
+    font-weight: bold;
+    padding: 2%;
+    background-color: transparent;
+}
+
+.rps:hover{
+    background-color: grey;
+}
+
+.newmouse{
+    position: absolute;
+    background-color: transparent;
+    border:  2px solid white;
+    border-radius: 50px;
+    height: 30px;
+    width: 30px;
+    pointer-events: none;
+}
+
+.mute{
+    position: fixed;
+    bottom: 0;
+    left:0;
+    background-color: transparent;
+    color: white;
+    border: none;
+}
+
+@media screen and ( max-width: 480px){
+  .side{
+      flex-direction: column;
+  }  
+  .life{
+      flex-direction: row;
+      height: auto;
+      width: 100%;
+      font-size: 2vw;
+      margin: 0;
+      padding: 0;
+  }
+  .charter{
+      width: 100%;
+  }
+  #playerimg{
+      width: inherit;
+  }
+  #compcharter{
+    width: 100%;
+    height:auto;
+  }
+  #compside{
+      flex-direction: column-reverse;
+  }
+  .name{
+      font-size: small;
+  }
+  .newmouse{
+      display: none;
+  }
+  #restart{
+      font-size: small;
+      width: 30vw;
+  }
+ .rps{
+     font-size: 40%;
+     width: auto;
+ }
+ .playercontrol{
+     flex-direction:column ;
+     flex-wrap: wrap;
+ }
+ .message{
+     font-size: small;
+    height: 50%;
+ }
+ .controls{
+     align-items: center;
+ }
+ .centercontainer2{
+     padding: 0;
+ }
+ #gamename{
+     font-size: xxx-large ;
+ }
+ .score{
+     display: flex;
+     border: 2px solid black;
+     font-size: xx-large;
+     align-items: center;
+     justify-content: center;
+ }
+ .reset{
+     justify-content: center;
+     align-content: center;
+ }
+}
